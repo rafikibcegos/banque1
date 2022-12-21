@@ -25,7 +25,7 @@ public class Personne {
 
 	private String prenom = "";
 	
-	private String email ="";
+	private String telephone ="";
 	
 
 	public Personne() {
@@ -37,20 +37,21 @@ public class Personne {
 	}
 
 
-	public Personne(Long id, String nom, String prenom, String email) {
+
+	public Personne(Long id, String nom, String prenom, String telephone) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
-		this.email = email;
+		this.telephone = telephone;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getTelephone() {
+		return telephone;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
 
 	public Long getId() {
@@ -79,8 +80,9 @@ public class Personne {
 
 	@Override
 	public String toString() {
-		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + "]";
+		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", telephone=" + telephone + "]";
 	}
+
 
 	
 	

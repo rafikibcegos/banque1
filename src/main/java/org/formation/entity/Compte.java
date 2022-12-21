@@ -1,5 +1,6 @@
 package org.formation.entity;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -18,6 +19,7 @@ import jakarta.persistence.Table;
 
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Compte {
 	
 	@Id
@@ -33,7 +35,7 @@ public class Compte {
 // @OneToOne(mappedBy = "compte")
 // private Client client;
 
-private Date dateOuverture;
+private LocalDate dateOuverture;
 private float solde;
 
 
@@ -74,13 +76,13 @@ public void setNumeroCompte(int numeroCompte) {
 
 
 
-public Date getDateOuverture() {
+public LocalDate getDateOuverture() {
 	return dateOuverture;
 }
 
 
 
-public void setDateOuverture(Date dateOuverture) {
+public void setDateOuverture(LocalDate dateOuverture) {
 	this.dateOuverture = dateOuverture;
 }
 
@@ -98,7 +100,7 @@ public void setSolde(float solde) {
 
 
 
-public Compte(Long id, int numeroCompte, Date dateOuverture, float solde) {
+public Compte(Long id, int numeroCompte, LocalDate dateOuverture, float solde) {
 	super();
 	this.id = id;
 	this.numeroCompte = numeroCompte;
